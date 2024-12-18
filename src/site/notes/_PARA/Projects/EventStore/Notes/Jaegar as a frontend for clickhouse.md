@@ -3,69 +3,31 @@
 ---
 
 
-# References 
+# References
+
 [[_PARA/Resources/Jaegar clickhouse community edition\|Jaegar clickhouse community edition]]
 
-
-<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
-
-
-
-
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
-
-
-# Excalidraw Data
-## Text Elements
-Get list of services irrespective of time range
- 
-Key value pairs of span attributes 
-Time range
- 
-Min and max trace Duration
- 
-These are only UI operations, 
-Don't impact the query
- 
-Graph is generated based on the 
-trace data of the "20" traces.
-20 is the limit given 
-No. Of traces to be returned
- 
-List of operations irrespective of time range
- 
-User input: 
-If you know the traceID 
-Entire trace data is already fetched 
-When you click on find traces 
-## Embedded Files
-57f4a73f8ce08072f9929a79e84c0e65e8f23294: [[Screenshot 2024-12-12 at 6.11.45 PM.png]]
-
-
-
-</div></div>
-
-
+![Pasted image 20241218222454.png](/img/user/_PARA/Projects/EventStore/Notes/attachments/Pasted%20image%2020241218222454.png)
 
 # Workflow
 
-### On page load
+### On Page Load
 
 - The list of services are populated on page load.
     - The operation parameter is also loaded for the service that is selected by default. 
     - "operation" here just refers to the **SpanName**. 
 
-### On clicking "Find Traces"
+### On Clicking "Find Traces"
 
 - Based on the various parameters given above, a single query is sent to the backend which returns the number of **traces equal to "limit results", sorted by their timestamp.**
 - A single json is returned from the backend containing the entire trace with all the details for the "x" number of traces. 
 
-### Sort dropdown
+### Sort Dropdown
 
 - All the various sorting options shown here are only UI operations. 
 - No request is sent to the backend. 
 
-### Compare page
+### Compare Page
 
 - If you know two trace IDs, It generates a comparison page.
 
@@ -73,11 +35,11 @@ When you click on find traces
 
 ---
 
-# Queries that are run in the backed to generate this UI
+# Queries That Are Run in the Backed to Generate This UI
 
-## Otel schema
+## Otel Schema
 
-### Get the list of services
+### Get the List of Services
 
 |   |
 |---|
@@ -85,7 +47,7 @@ When you click on find traces
 
   
 
-### List of operations
+### List of Operations
 
 |   |
 |---|
@@ -93,7 +55,7 @@ When you click on find traces
 
   
 
-### Find traces based on criteria
+### Find Traces Based on Criteria
 
 |   |
 |---|
@@ -101,7 +63,7 @@ When you click on find traces
 
 References - [https://github.com/jaegertracing/jaeger-clickhouse/blob/main/storage/clickhousespanstore/reader.go](https://github.com/jaegertracing/jaeger-clickhouse/blob/main/storage/clickhousespanstore/reader.go)
 
-### Get trace details based on TraceID
+### Get Trace Details Based on TraceID
 
 |   |
 |---|
@@ -109,7 +71,7 @@ References - [https://github.com/jaegertracing/jaeger-clickhouse/blob/main/stor
 
   
 
-### Trace comparison page
+### Trace Comparison Page
 
 |                                  |
 | -------------------------------- |

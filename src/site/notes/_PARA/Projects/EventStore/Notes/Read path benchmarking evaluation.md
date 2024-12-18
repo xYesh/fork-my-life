@@ -2,7 +2,9 @@
 {"dg-publish":true,"permalink":"/para/projects/event-store/notes/read-path-benchmarking-evaluation/"}
 ---
 
+
 Official benchmarking docs - [ClickBench — a Benchmark For Analytical DBMS](https://benchmark.clickhouse.com/)  
+
 - It has comparisons to Pinot too.
 # Objective
 
@@ -29,9 +31,9 @@ Build a performance tool to simulate high volume read operations on trace data s
 4. Generate target QPS of 100.
 
 ---
-# Available solutions
+# Available Solutions
 
-## Clickhouse-benchmark 
+## Clickhouse-benchmark
 
 doc - [https://clickhouse.com/docs/en/operations/utilities/clickhouse-benchmark](https://clickhouse.com/docs/en/operations/utilities/clickhouse-benchmark)
 
@@ -52,7 +54,7 @@ doc - [https://clickhouse.com/docs/en/operations/utilities/clickhouse-benchmark
 
   
 
-## Python script to query directly using clickhouse-cli 
+## Python Script to Query Directly Using Clickhouse-cli
 
 doc - [https://github.com/ClickHouse/simple-logging-benchmark](https://github.com/ClickHouse/simple-logging-benchmark)
 
@@ -65,7 +67,7 @@ doc - [https://github.com/ClickHouse/simple-logging-benchmark](https://github.c
 
   
 
-## K6 script - Query via the Clickhouse HTTP port
+## K6 Script - Query via the Clickhouse HTTP Port
 
 doc - Clickhouse HTTP interface - [https://clickhouse.com/docs/en/interfaces/http](https://clickhouse.com/docs/en/interfaces/http)
 

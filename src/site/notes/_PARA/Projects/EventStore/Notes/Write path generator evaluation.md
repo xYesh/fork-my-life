@@ -4,7 +4,7 @@
 
 
 
-# Honeycomb traces generator
+# Honeycomb Traces Generator
 
 - [[_PARA/Projects/EventStore/Notes/Write path generator evaluation#Commands\|Commands]]
 	- [[_PARA/Projects/EventStore/Notes/Write path generator evaluation#Commands\|basic script that generates 100 traces per second for 10 seconds]]
@@ -13,13 +13,12 @@
 		- [[_PARA/Projects/EventStore/Notes/Write path generator evaluation#Script with custom spanAttributes added to it\|Data in clickhouse]]
 - [[_PARA/Projects/EventStore/Notes/Write path generator evaluation#Generator details\|Generator details]]
 
-
-
 Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to create traces in OTel or Honeycomb formats](https://github.com/honeycombio/loadgen)
 
 [[_PARA/Projects/EventStore/Notes/attachments/Diagram - loadgen-setup\|Diagram - loadgen-setup]]
-### Commands 
-#### basic script that generates 100 traces per second for 10 seconds
+
+### Commands
+#### Basic Script That Generates 100 Traces per Second for 10 Seconds
 ```Shell
 ./loadgen --tps=100 --depth=10 --nspans=10 --extra=8 --runtime=10s --ramptime=5s --sender=otel --insecure --host=localhost:4317
 ```
@@ -50,12 +49,12 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 "Links.Attributes": []
 ```
 
-#### Script with custom spanAttributes added to it
+#### Script with Custom spanAttributes Added to it
 ```shell
 ./loadgen --tps=100 --depth=10 --nspans=10 --extra=8 --runtime=10s --ramptime=5s --sender=otel --insecure --host=localhost:4317 --dataset=generatorTest product=/sa discount=/b20 price=/fg100,50
 ```
 
-##### Data in clickhouse
+##### Data in Clickhouse
 ```json
 "Timestamp": "2024-12-09 03:40:32.810734000",
 "TraceId": "fba470055ed0e606bccdea7112ce1e24",
@@ -81,7 +80,8 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 "Links.Attributes": []
 ```
 
-### Generator details
+### Generator Details
+
 [GitHub - honeycombio/loadgen: A flexible command-line load generator to create traces in OTel or Honeycomb formats](https://github.com/honeycombio/loadgen?tab=readme-ov-file#generators)
 
 | type  | description                                              | p1                          | p2                           |
@@ -99,6 +99,3 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 | u     | url-like (2 parts)                                       | cardinality of 1st part (3) | cardinality of 2nd part (10) |
 | uq    | url with random query                                    | cardinality of 1st part (3) | cardinality of 2nd part (10) |
 | st    | status code                                              | percentage of 400s          | percentage of 500s           |
-
-
-

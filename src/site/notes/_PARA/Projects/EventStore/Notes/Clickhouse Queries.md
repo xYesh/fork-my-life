@@ -3,7 +3,7 @@
 ---
 
 
-####  Table creation command
+#### Table Creation Command
 
 ```sql
 CREATE TABLE helloworld.my_first_table
@@ -17,7 +17,7 @@ ENGINE = MergeTree()
 PRIMARY KEY (user_id, timestamp)
 ```
 
-#### Inserting some data into a table
+#### Inserting Some Data into a Table
 
 ```sql
 INSERT INTO helloworld.my_first_table (user_id, message, timestamp, metric) VALUES
@@ -27,8 +27,7 @@ INSERT INTO helloworld.my_first_table (user_id, message, timestamp, metric) VALU
     (101, 'Granules are the smallest chunks of data read',      now() + 5,   3.14159 )
 ```
 
-#### Get table schema
+#### Get Table Schema
 ```sql
 SHOW CREATE TABLE table_name;
 ```
-
