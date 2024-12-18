@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/study/dsa/leetcode/leetcode/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/study/dsa/leetcode/leetcode/"}
 ---
 
 # Quick Add

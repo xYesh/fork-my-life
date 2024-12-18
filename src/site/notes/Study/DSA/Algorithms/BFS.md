@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/study/dsa/algorithms/bfs/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/study/dsa/algorithms/bfs/"}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/study/dsa/data-structures/linked-list/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/study/dsa/data-structures/linked-list/"}
 ---
 
 

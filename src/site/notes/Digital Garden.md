@@ -1,5 +1,5 @@
 ---
-{"dg-home":true,"dg-publish":true,"permalink":"/digital-garden/","tags":["gardenEntry"],"dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/digital-garden/","tags":["gardenEntry"]}
 ---
 
 [[Study/DSA/Leetcode/Leetcode\|Leetcode]]

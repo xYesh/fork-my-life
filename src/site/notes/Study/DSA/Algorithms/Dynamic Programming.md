@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/study/dsa/algorithms/dynamic-programming/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/study/dsa/algorithms/dynamic-programming/"}
 ---
 
 
