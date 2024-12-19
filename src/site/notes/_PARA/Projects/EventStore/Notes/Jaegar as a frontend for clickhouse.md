@@ -5,7 +5,7 @@
 
 # References
 
-[[_PARA/Resources/Clickhouse/Jaegar clickhouse community edition\|Jaegar clickhouse community edition]]
+[[_PARA/Resources/Processed/Clickhouse/Jaegar clickhouse community edition\|Jaegar clickhouse community edition]]
 
 ![Pasted image 20241218222454.png](/img/user/_PARA/Projects/EventStore/Notes/attachments/Pasted%20image%2020241218222454.png)
 
@@ -57,9 +57,9 @@
 
 ### Find Traces Based on Criteria
 
-|   |
-|---|
-|`#Get the list of spans.`<br><br>`SELECT * FROM otel_traces`<br><br>`WHERE ServiceName = {ServiceName}`<br><br>`AND SpanName = {SpanName}`<br><br>`AND Duration > {min_duration} AND Duration < {max_duration}`<br><br>`AND SpanAttributes[{SpanAttribute_key}] = {SpanAttribute_value}`<br><br>`AND Timestamp > {lookBackTime_timestamp} AND Timestamp < {current_timestamp}`<br><br>`#Unqiue Trace IDs are aquired from the above query and gotten using the below query.`|
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `# Get the list of spans.`<br><br>`SELECT * FROM otel_traces`<br><br>`WHERE ServiceName = {ServiceName}`<br><br>`AND SpanName = {SpanName}`<br><br>`AND Duration > {min_duration} AND Duration < {max_duration}`<br><br>`AND SpanAttributes[{SpanAttribute_key}] = {SpanAttribute_value}`<br><br>`AND Timestamp > {lookBackTime_timestamp} AND Timestamp < {current_timestamp}`<br><br>`# Unqiue Trace IDs are aquired from the above query and gotten using the below query.` |
 
 References - [https://github.com/jaegertracing/jaeger-clickhouse/blob/main/storage/clickhousespanstore/reader.go](https://github.com/jaegertracing/jaeger-clickhouse/blob/main/storage/clickhousespanstore/reader.go)
 
@@ -73,6 +73,6 @@ References - [https://github.com/jaegertracing/jaeger-clickhouse/blob/main/stor
 
 ### Trace Comparison Page
 
-|                                  |
-| -------------------------------- |
-| `#Uses the same query as above.` |
+|                                   |
+| --------------------------------- |
+| `# Uses the same query as above.` |
