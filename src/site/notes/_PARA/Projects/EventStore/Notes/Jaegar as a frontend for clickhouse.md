@@ -5,7 +5,7 @@
 
 # References
 
-[[_PARA/Resources/Jaegar clickhouse community edition\|Jaegar clickhouse community edition]]
+[[_PARA/Resources/Clickhouse/Jaegar clickhouse community edition\|Jaegar clickhouse community edition]]
 
 ![Pasted image 20241218222454.png](/img/user/_PARA/Projects/EventStore/Notes/attachments/Pasted%20image%2020241218222454.png)
 
