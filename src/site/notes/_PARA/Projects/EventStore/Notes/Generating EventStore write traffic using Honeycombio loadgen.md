@@ -100,7 +100,16 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 | uq    | url with random query                                    | cardinality of 1st part (3) | cardinality of 2nd part (10) |
 | st    | status code                                              | percentage of 400s          | percentage of 500s           |
 
+#### Script with print the traces to local
+```shell
+./loadgen --tracecount=3 --depth=10 --nspans=10 --extra=8 --sender=print --dataset=generatorTest product=/sa discount=/b20 price=/fg100,50
 
+
+./loadgen --tracecount=1 --depth=10 --nspans=20 --sender=print --dataset=prodRepl net.peer.name=0.0.0.0 http.status_code=/st10,0.1 status.code=/i-1,1 net.peer.port=-1 fk.page.uri=/uq10,100000 fk.url=/u10,1000 flow=/u10,1000 originZone=/sw8 fk.page.type=/sq1000 apiMethod=/sw5000  http.method=/sq10 EngagementTime=/i0,1000 Uptime=/ir0,1000 FULLY_PAINTED_TIME=/ig0,1000 appName=/sw20 SessionInfo=/sa16
+
+
+./loadgen --tracecount=100 --depth=10 --nspans=20 --sender=print --dataset=prodRepl fk.page.type=/sq100000
+```
 # Data shape
 
 ## ARB data
@@ -130,38 +139,38 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 
 | Source  | Attribute Name     | Attribute Type | Example                                                                                                     | Cardinality | Loadgen parameter |
 | ------- | ------------------ | -------------- | ----------------------------------------------------------------------------------------------------------- | ----------- | ----------------- |
-| UAR/DT  | http.method        | String         | "POST"                                                                                                      | Low         |                   |
-| UAR/DT  | apiMethod          | String         | "com.flipkart.astra.server.resource.CustomAstraResource.fetchWidget"                                        | Low         |                   |
-| UAR/DT  | fk.page.type       | String         | productPage                                                                                                 | Low         |                   |
-| UAR/DT  | originZone         | String         | "in-hyderabad-1"                                                                                            | Low         |                   |
-| UAR/DT  | net.peer.port      | int            | -1                                                                                                          |             |                   |
-| UAR/DT  | status.code        | int            | 0                                                                                                           |             |                   |
-| UAR/DT  | http.status_code   | int            | 200                                                                                                         |             |                   |
 | UAR/DT  | net.peer.name      | ip             | 10.24.15.135                                                                                                |             |                   |
-| UAR/DT  | flow               | url            | "/4/page/fetch/productPage"                                                                                 | Low         |                   |
+| UAR/DT  | http.status_code   | int            | 200                                                                                                         |             |                   |
+| UAR/DT  | status.code        | int            | 0                                                                                                           |             |                   |
+| UAR/DT  | net.peer.port      | int            | -1                                                                                                          |             |                   |
 | UAR/DT  | fk.page.uri        | url            | "/%20/p/%20?pid=TSHGFF84YKTPQN5E"                                                                           | High        |                   |
 | UAR/DT  | fk.url             | url            | "/4/page/fetch"                                                                                             | Low         |                   |
-| RUM     | sessionCrashed     | Boolean        | true                                                                                                        |             |                   |
-| RUM     | deviceType         | String         | Mobile / Tablet / random string                                                                             | Low         |                   |
-| RUM     | deviceModel        | String         |                                                                                                             | Low         |                   |
-| RUM     | deviceManufacturer | String         |                                                                                                             | Low         |                   |
-| RUM     | MobileOSVersion    | String         | 8.0.1                                                                                                       | Low         |                   |
-| RUM     | JS_Crash_Message   | String         | WIDGET_RENDERING_ERROR_ATLAS_WIDGET_default_fk_hp_tab_marketplace_wo-grocery_1: undefined is not a function | Low         |                   |
-| RUM     | SessionInfo        | String         | UUID + Some string                                                                                          |             |                   |
-| RUM     | AppVersion         | String         | 8.13                                                                                                        | low         |                   |
-| RUM     | appName            | String         | fkAndroid                                                                                                   |             |                   |
-| RUM     | SessionID          | UUID           |                                                                                                             | high        |                   |
-| RUM     | deviceUUID         | UUID           |                                                                                                             | high        |                   |
-| RUM     | ABInfo             | UUID           |                                                                                                             | High        |                   |
-| RUM     | FULLY_PAINTED_TIME | int            | 1234                                                                                                        |             |                   |
-| RUM     | Uptime             | int            | 300                                                                                                         |             |                   |
+| UAR/DT  | flow               | url            | "/4/page/fetch/productPage"                                                                                 | Low         |                   |
+| UAR/DT  | originZone         | String         | "in-hyderabad-1"                                                                                            | Low         |                   |
+| UAR/DT  | fk.page.type       | String         | productPage                                                                                                 | Low         |                   |
+| UAR/DT  | apiMethod          | String         | "com.flipkart.astra.server.resource.CustomAstraResource.fetchWidget"                                        | Low         |                   |
+| UAR/DT  | http.method        | String         | "POST"                                                                                                      | Low         |                   |
 | RUM     | EngagementTime     | int            | 2                                                                                                           |             |                   |
+| RUM     | Uptime             | int            | 300                                                                                                         |             |                   |
+| RUM     | FULLY_PAINTED_TIME | int            | 1234                                                                                                        |             |                   |
+| RUM     | appName            | String         | fkAndroid                                                                                                   |             |                   |
+| RUM     | SessionInfo        | String         | UUID + Some string                                                                                          |             |                   |
+| RUM     | sessionCrashed     | Boolean        | true                                                                                                        |             |                   |
+| RUM     | deviceUUID         | UUID           |                                                                                                             | High        |                   |
+| RUM     | SessionID          | UUID           |                                                                                                             | High        |                   |
+| RUM     | ABInfo             | UUID           |                                                                                                             | High        |                   |
+| RUM     | AppVersion         | String         | 8.13                                                                                                        | Low         |                   |
 | RUM     | requestDomain      | url            | www.Flipkart.com                                                                                            | Low         |                   |
-| Asterix | x-user-agent       | String         |                                                                                                             | Low         |                   |
-| Asterix | offerStatus        | String         |                                                                                                             | Low         |                   |
-| Asterix | CustomerId         | UUID           |                                                                                                             | High        |                   |
-| Asterix | EventId            | UUID           |                                                                                                             |             |                   |
-| Asterix | OrderId            | UUID           |                                                                                                             |             |                   |
-| Asterix | CheckoutId         | UUID           |                                                                                                             |             |                   |
+| RUM     | JS_Crash_Message   | String         | WIDGET_RENDERING_ERROR_ATLAS_WIDGET_default_fk_hp_tab_marketplace_wo-grocery_1: undefined is not a function | Low         |                   |
+| RUM     | MobileOSVersion    | String         | 8.0.1                                                                                                       | Low         |                   |
+| RUM     | deviceManufacturer | String         |                                                                                                             | Low         |                   |
+| RUM     | deviceModel        | String         |                                                                                                             | Low         |                   |
+| RUM     | deviceType         | String         | Mobile / Tablet / random string                                                                             | Low         |                   |
 | Asterix | fk-client-ip       | ip             |                                                                                                             |             |                   |
+| Asterix | CheckoutId         | UUID           |                                                                                                             |             |                   |
+| Asterix | OrderId            | UUID           |                                                                                                             |             |                   |
+| Asterix | EventId            | UUID           |                                                                                                             |             |                   |
+| Asterix | CustomerId         | UUID           |                                                                                                             | High        |                   |
+| Asterix | offerStatus        | String         |                                                                                                             | Low         |                   |
+| Asterix | x-user-agent       | String         |                                                                                                             | Low         |                   |
 
