@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/para/projects/event-store/notes/jaegar-as-a-frontend-for-clickhouse/"}
+{"dg-publish":true,"permalink":"/para/projects/event-store/notes/jaegar-as-a-frontend-for-clickhouse/","tags":["Database/Clickhouse","O11y","O11y/Jaegar","O11y/Jaegar/RemoteStorage"]}
 ---
 
 

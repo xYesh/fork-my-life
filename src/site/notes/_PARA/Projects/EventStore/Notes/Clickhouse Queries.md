@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/para/projects/event-store/notes/clickhouse-queries/"}
+{"dg-publish":true,"permalink":"/para/projects/event-store/notes/clickhouse-queries/","tags":["Database/Clickhouse"]}
 ---
 
 

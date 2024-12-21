@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/para/projects/event-store/notes/read-path-benchmarking-evaluation/"}
+{"dg-publish":true,"permalink":"/para/projects/event-store/notes/read-path-benchmarking-evaluation/","tags":["O11y","Benchmark","Database/Clickhouse","Benchmark/k6"]}
 ---
 
 
