@@ -112,7 +112,7 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 ```
 # Data shape
 
-## ARB data
+## ARB[^1] data
 
 | Distributed Tracing                      |                                                                  |
 | ---------------------------------------- | ---------------------------------------------------------------- |
@@ -174,3 +174,4 @@ Repo - [GitHub - honeycombio/loadgen: A flexible command-line load generator to 
 | Asterix | offerStatus        | String         |                                                                                                             | Low         |                   |
 | Asterix | x-user-agent       | String         |                                                                                                             | Low         |                   |
 
+[^1]: Architecture review board
